@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="design.css">
 </head>
 
@@ -35,8 +36,7 @@
       <div class="slides">
 
         <!-- 1-0 표지 -->
-        <section data-nav="표지">
-
+        <section data-nav="표지" data-theme="hero">
           <div class="slide-cover">
             <div class="cover-badge">2026 FM 신입사원 교육</div>
             <h1>
@@ -48,7 +48,7 @@
         </section>
 
         <!-- 1-1 아이스브레이킹: 이해도 체크 -->
-        <section data-nav="이해도 체크">
+        <section data-nav="이해도 체크" data-theme="light">
           <div class="section-label">시작하기 전에</div>
           <h2>여러분은 AI를<br>얼마나 가까이 쓰고 계신가요?</h2>
           <div class="icebreak-grid">
@@ -72,7 +72,7 @@
         </section>
 
         <!-- 1-2 AI란: 한 문장 정의 -->
-        <section data-nav="AI란">
+        <section data-nav="AI란" data-theme="warm">
           <div class="slide-statement">
             <div class="section-label">AI, 한 문장으로</div>
             <h2>
@@ -81,13 +81,13 @@
               <span class="text-mask"><span class="mask-inner">기계가 대신, 혹은 함께 할 수 있게 된 기술</span></span>
             </h2>
             <p class="statement-note">
-              핵심은 '대신'이 아니라 <strong>'함께'</strong>입니다 🤝
+              핵심은 '대신'이 아니라 <strong>'함께'</strong>입니다
             </p>
           </div>
         </section>
 
         <!-- 1-3 생성형 AI의 종류 -->
-        <section data-nav="생성형 AI">
+        <section data-nav="생성형 AI" data-theme="light">
           <div class="section-label">지금 쓸 수 있는 것들</div>
           <h2>생성형 AI의 네 가지 영역</h2>
           <div class="quad-grid">
@@ -127,7 +127,7 @@
         </section>
 
         <!-- 1-4 Before/After -->
-        <section data-nav="Before / After">
+        <section data-nav="Before / After" data-theme="dark">
           <div class="section-label">같은 일, 다른 속도</div>
           <h2>AI 전과 후</h2>
           <div class="ba-list">
@@ -186,8 +186,8 @@
           </div>
         </section>
 
-        <!-- 1-5 패러다임 전환: 도구를 배우는 시대 → 도구를 만드는 시대 -->
-        <section data-nav="패러다임 전환">
+        <!-- 1-5 패러다임 전환 -->
+        <section data-nav="패러다임 전환" data-theme="light">
           <div class="section-label">패러다임이 바뀌었습니다</div>
           <h2>
             <span class="text-mask"><span class="mask-inner">도구를 배우는 시대에서</span></span>
@@ -213,30 +213,31 @@
                   필요한 기능이 없으면? 참거나 다른 도구를 또 배움
                 </div>
               </div>
-              <div class="paradigm-card new anim">
-                <div class="paradigm-content">
-                  <div class="paradigm-icon">🚀</div>
-                  <div class="paradigm-label">지금부터</div>
-                  <div class="paradigm-title">내게 필요한 도구를 직접 만드는 시대</div>
-                  <div class="paradigm-tools">
-                    <span class="ptool accent-tool">OrangeWhale</span>
-                    <span class="ptool accent-tool">FM ERP</span>
-                    <span class="ptool accent-tool">나만의 자동화</span>
-                    <span class="ptool accent-tool">맞춤형 도구</span>
-                  </div>
-                  <div class="paradigm-desc"
-                    data-typetext="&quot;이런 게 있으면 좋겠는데&quot; → AI와 함께 직접 만듦&#10;우리 업무에 딱 맞는 시스템을 빠르게 구축&#10;도구에 나를 맞추는 게 아니라, 나에게 도구를 맞춤">
-                    "이런 게 있으면 좋겠는데" → AI와 함께 직접 만듦<br>
-                    우리 업무에 딱 맞는 시스템을 빠르게 구축<br>
-                    도구에 나를 맞추는 게 아니라, 나에게 도구를 맞춤
-                  </div>
+            </div>
+            <div class="paradigm-card new anim">
+              <div class="paradigm-content">
+                <div class="paradigm-icon">🚀</div>
+                <div class="paradigm-label">지금부터</div>
+                <div class="paradigm-title">내게 필요한 도구를 직접 만드는 시대</div>
+                <div class="paradigm-tools">
+                  <span class="ptool accent-tool">OrangeWhale</span>
+                  <span class="ptool accent-tool">FM ERP</span>
+                  <span class="ptool accent-tool">나만의 자동화</span>
+                  <span class="ptool accent-tool">맞춤형 도구</span>
+                </div>
+                <div class="paradigm-desc"
+                  data-typetext="&quot;이런 게 있으면 좋겠는데&quot; → AI와 함께 직접 만듦&#10;우리 업무에 딱 맞는 시스템을 빠르게 구축&#10;도구에 나를 맞추는 게 아니라, 나에게 도구를 맞춤">
+                  "이런 게 있으면 좋겠는데" → AI와 함께 직접 만듦<br>
+                  우리 업무에 딱 맞는 시스템을 빠르게 구축<br>
+                  도구에 나를 맞추는 게 아니라, 나에게 도구를 맞춤
                 </div>
               </div>
             </div>
+          </div>
         </section>
 
         <!-- 1-6 FM이 다른 점 -->
-        <section data-nav="FM의 실천">
+        <section data-nav="FM의 실천" data-theme="hero">
           <div class="slide-statement">
             <div class="section-label">FM은 이미 시작했습니다</div>
             <h2>
@@ -251,8 +252,8 @@
           </div>
         </section>
 
-        <!-- 1-6 FM AI 프로젝트 개요 -->
-        <section data-nav="FM 프로젝트">
+        <!-- 1-7 FM AI 프로젝트 개요 -->
+        <section data-nav="FM 프로젝트" data-theme="warm">
           <div class="section-label">현재 진행 중인 프로젝트</div>
           <h2>FM의 두 가지 AI 프로젝트</h2>
           <div class="project-grid">
@@ -266,7 +267,7 @@
                 <div class="project-detail">👥 여러분이 앞으로 매일 쓰게 될 시스템</div>
               </div>
             </div>
-            <div class="project-card featured">
+            <div class="project-card featured anim">
               <div class="project-emoji">🐋</div>
               <div class="project-name">OrangeWhale</div>
               <div class="project-oneliner">FM이 직접 만든 AI 이미지/영상 생성 도구</div>
@@ -279,8 +280,8 @@
           </div>
         </section>
 
-        <!-- 1-7 ERP 시연 -->
-        <section data-nav="ERP 시연">
+        <!-- 1-8 ERP 시연 -->
+        <section data-nav="ERP 시연" data-theme="light">
           <div class="split-layout">
             <div class="split-text">
               <div class="demo-badge">LIVE DEMO</div>
@@ -305,14 +306,14 @@
             </div>
             <div class="split-visual">
               <div class="device-frame">
-                <img src="assets/screenshot-erp.png" alt="FM ERP 대시보드">
+                <img src="assets/screenshot-erp-1.png" alt="FM ERP 대시보드">
               </div>
             </div>
           </div>
         </section>
 
-        <!-- 1-8 OrangeWhale 시연 -->
-        <section data-nav="OrangeWhale 시연">
+        <!-- 1-9 OrangeWhale 시연 -->
+        <section data-nav="OrangeWhale 시연" data-theme="light">
           <div class="split-layout">
             <div class="split-text">
               <div class="demo-badge">LIVE DEMO</div>
@@ -341,14 +342,14 @@
             </div>
             <div class="split-visual">
               <div class="device-frame">
-                <img src="assets/screenshot-ow.png" alt="OrangeWhale 에디터">
+                <img src="assets/screenshot-ow-1.png" alt="OrangeWhale 에디터">
               </div>
             </div>
           </div>
         </section>
 
-        <!-- 1-9 핵심 메시지 -->
-        <section data-nav="오늘의 핵심">
+        <!-- 1-10 핵심 메시지 -->
+        <section data-nav="오늘의 핵심" data-theme="dark">
           <div class="slide-statement closing">
             <h2>
               <span class="text-mask"><span class="mask-inner">AI는 <span class="accent">기획자를 대체</span>하지
@@ -364,8 +365,8 @@
           </div>
         </section>
 
-        <!-- 1-10 Q&A -->
-        <section data-nav="Q&A">
+        <!-- 1-11 Q&A -->
+        <section data-nav="Q&A" data-theme="warm">
           <div class="slide-cover">
             <div class="qa-emoji">🙋‍♀️ 🙋‍♂️</div>
             <h2>질문 & 이야기</h2>
@@ -383,7 +384,7 @@
       <div class="slides">
 
         <!-- 2-0 표지 -->
-        <section data-nav="표지">
+        <section data-nav="표지" data-theme="hero">
           <div class="slide-cover">
             <div class="cover-badge">2026 FM 신입사원 교육</div>
             <h1>
@@ -394,10 +395,8 @@
           </div>
         </section>
 
-        <!-- ===== 전반 40분 ===== -->
-
         <!-- 2-1 어제 복습 -->
-        <section data-nav="어제 복습">
+        <section data-nav="어제 복습" data-theme="light">
           <div class="section-label">Day 1 복습</div>
           <h2>어제 우리가 본 것</h2>
           <div class="recap-list">
@@ -424,7 +423,7 @@
         </section>
 
         <!-- 2-2 플래너의 업무 흐름 -->
-        <section data-nav="업무 흐름">
+        <section data-nav="업무 흐름" data-theme="warm">
           <div class="section-label">우리의 일</div>
           <h2>프로모션 플래너는 이렇게 일합니다</h2>
           <div class="workflow">
@@ -467,7 +466,7 @@
         </section>
 
         <!-- 2-3 기획 단계 구체적 활용 -->
-        <section data-nav="기획에 AI">
+        <section data-nav="기획에 AI" data-theme="light">
           <div class="section-label">Phase 1~2 &middot; 브리프 분석 &amp; 기획</div>
           <h2>기획 단계에서 AI는 이렇게 씁니다</h2>
           <div class="prompt-showcase">
@@ -492,7 +491,7 @@
         </section>
 
         <!-- 2-4 제안서 단계 -->
-        <section data-nav="제안서에 AI">
+        <section data-nav="제안서에 AI" data-theme="light">
           <div class="section-label">Phase 3 &middot; 제안서 작성</div>
           <h2>제안서 작업에서 AI는 이렇게 씁니다</h2>
           <div class="prompt-showcase">
@@ -517,7 +516,7 @@
         </section>
 
         <!-- 2-5 실행/운영 단계 -->
-        <section data-nav="실행에 AI">
+        <section data-nav="실행에 AI" data-theme="dark">
           <div class="section-label">Phase 4~5 &middot; 실행 &amp; 보고</div>
           <h2>실행과 보고에서 AI는 이렇게 씁니다</h2>
           <div class="prompt-showcase">
@@ -543,7 +542,7 @@
         </section>
 
         <!-- 2-6 프롬프트 원칙 -->
-        <section data-nav="프롬프트 원칙">
+        <section data-nav="프롬프트 원칙" data-theme="light">
           <div class="section-label">프롬프트 엔지니어링</div>
           <h2>같은 AI, 다른 결과 — 프롬프트의 차이</h2>
           <div class="compare-block">
@@ -569,7 +568,7 @@
         </section>
 
         <!-- 2-7 프롬프트에서 컨텍스트로 -->
-        <section data-nav="컨텍스트 시대">
+        <section data-nav="컨텍스트 시대" data-theme="warm">
           <div class="section-label">2026년, 이미 달라진 것</div>
           <h2>
             <span class="text-mask"><span class="mask-inner">프롬프트의 시대에서</span></span>
@@ -603,7 +602,7 @@
         </section>
 
         <!-- 2-8 쉬는 시간 -->
-        <section data-nav="Break">
+        <section data-nav="Break" data-theme="warm">
           <div class="slide-cover">
             <div class="qa-emoji">☕</div>
             <h2>잠시 쉬어갑니다</h2>
@@ -611,10 +610,8 @@
           </div>
         </section>
 
-        <!-- ===== 후반 40분 ===== -->
-
-        <!-- 2-8 실습 안내 -->
-        <section data-nav="실습 안내">
+        <!-- 2-9 실습 안내 -->
+        <section data-nav="실습 안내" data-theme="light">
           <div class="section-label">Hands-on</div>
           <h2>직접 해봅시다</h2>
           <div class="hands-on-flow">
@@ -642,8 +639,8 @@
           </div>
         </section>
 
-        <!-- 2-9 가상 브리프 -->
-        <section data-nav="가상 브리프">
+        <!-- 2-10 가상 브리프 -->
+        <section data-nav="가상 브리프" data-theme="color-purple">
           <div class="section-label">실습 미션</div>
           <h2>가상 브리프</h2>
           <div class="brief-card">
@@ -681,8 +678,8 @@
           </div>
         </section>
 
-        <!-- 2-10 코드 시연 -->
-        <section data-nav="코드 시연">
+        <!-- 2-11 코드 시연 -->
+        <section data-nav="코드 시연" data-theme="dark">
           <div class="split-layout">
             <div class="split-text">
               <div class="demo-badge">LIVE DEMO</div>
@@ -707,14 +704,14 @@
             </div>
             <div class="split-visual">
               <div class="device-frame">
-                <img src="assets/screenshot-code.png" alt="Claude Code 터미널">
+                <img src="assets/screenshot-ow-3.png" alt="OrangeWhale 메인">
               </div>
             </div>
           </div>
         </section>
 
-        <!-- 2-11 내일부터 -->
-        <section data-nav="내일부터">
+        <!-- 2-12 내일부터 -->
+        <section data-nav="내일부터" data-theme="light">
           <div class="section-label">Action Items</div>
           <h2>내일부터 바로 시작할 수 있는 것</h2>
           <div class="action-grid">
@@ -741,8 +738,8 @@
           </div>
         </section>
 
-        <!-- 2-12 마무리 -->
-        <section data-nav="마무리">
+        <!-- 2-13 마무리 -->
+        <section data-nav="마무리" data-theme="hero">
           <div class="slide-cover">
             <div class="slide-statement closing">
               <h2>
@@ -757,8 +754,8 @@
           </div>
         </section>
 
-        <!-- 2-13 Q&A -->
-        <section data-nav="Q&A">
+        <!-- 2-14 Q&A -->
+        <section data-nav="Q&A" data-theme="warm">
           <div class="slide-cover">
             <div class="qa-emoji">🙋‍♀️ 🙋‍♂️</div>
             <h2>질문 & 이야기</h2>
@@ -771,7 +768,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
-  <script src="app.js?v=7"></script>
+  <script src="app.js?v=8"></script>
 </body>
 
 </html>

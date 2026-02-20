@@ -205,10 +205,25 @@
     });
   }
 
-  // ==================== GNB Style (Light Mode) ====================
+  // ==================== GNB Style (다크/라이트 동적 전환) ====================
 
   function updateGnbStyle(slide) {
-    // Keep GNB dark (Premium). Do nothing.
+    if (!slide) return;
+    var gnb = document.querySelector('.gnb');
+    if (!gnb) return;
+
+    var theme = slide.getAttribute('data-theme');
+    var isDark = (theme === 'hero' || theme === 'dark');
+
+    if (isDark) {
+      gnb.classList.add('gnb-dark');
+      gnb.classList.remove('gnb-light');
+      document.body.classList.add('side-nav-light');
+    } else {
+      gnb.classList.remove('gnb-dark');
+      gnb.classList.add('gnb-light');
+      document.body.classList.remove('side-nav-light');
+    }
   }
 
   // ==================== Day 전환 ====================
