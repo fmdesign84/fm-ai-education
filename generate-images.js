@@ -15,32 +15,42 @@ if (!API_KEY) {
 const ASSETS_DIR = path.join(__dirname, 'assets');
 if (!fs.existsSync(ASSETS_DIR)) fs.mkdirSync(ASSETS_DIR, { recursive: true });
 
-// 생성할 이미지 목록 — 배경색 매칭 필수
-// 다크 슬라이드(#000000): cover-day1, cover-day2, break, closing
-// 라이트 슬라이드: quad-card(#F5F5F7 카드 안), paradigm-card(#F5F5F7/#FFF5F0 카드 안)
+// 슬라이드 배경색 기준:
+// hero: 오렌지 그라디언트 (#FF4500 → #FF8F64)
+// light: 흰색 (#FFFFFF)
+// warm: 베이지 (#F5F0EB)
+// dark: #121212
+// color-purple: 퍼플 (#AB9BFF)
 const IMAGE_PROMPTS = [
-  // === 화이트 배경 슬라이드 (배경: #FFFFFF) — 표지, Break ===
+  // === 마스코트 석상 (패러디) ===
   {
-    filename: 'cover-day1.jpg',
-    prompt: 'Abstract minimal visualization of neural network connections. Pure white (#FFFFFF) background. Very subtle, thin orange (#FF6B00) light trails forming a sparse geometric network pattern. The lines are delicate and airy. Extremely clean, premium, Apple product page aesthetic. No text, no logos. 16:9 aspect ratio. Ultra high quality.',
+    filename: 'mascot-thinker.png',
+    prompt: 'A cute, stylized miniature version of Rodin\'s "The Thinker" marble sculpture wearing a modern black business suit and thick-rimmed glasses. The sculpture is in a thinking pose with one hand on chin. Clean transparent/white background (#F5F0EB). The statue has a warm cream marble tone. Friendly, approachable, slightly humorous. Square 1:1 format. Studio lighting. Very clean edges for cutout. No text. Ultra high quality.',
   },
+  // === hero 슬라이드 배경 (오렌지 그라디언트 위) ===
   {
-    filename: 'cover-day2.jpg',
-    prompt: 'Minimal abstract scene: a soft warm orange (#FF6B00) glowing orb floating in pure white (#FFFFFF) space. Subtle light rays emanating outward. The mood is focused and forward-looking. Premium, airy, Apple product page style. No text, no logos. 16:9 aspect ratio. Ultra high quality.',
+    filename: 'bg-hero.jpg',
+    prompt: 'A dramatic classical Greek marble bust sculpture, slightly off-center to the right, on a warm orange gradient background (#FF4500 to #FF8F64). The bust has a heroic, forward-looking pose. Warm orange and gold lighting illuminates the sculpture from the side. The mood is bold, powerful, and premium. Cinematic composition with generous negative space on the left for text overlay. Very high contrast. No text, no logos. 16:9 aspect ratio. Ultra high quality. Fashion editorial meets museum photography aesthetic.',
   },
+  // === light 슬라이드 배경 (흰색 위) ===
   {
-    filename: 'break.jpg',
-    prompt: 'Bright, airy coffee scene on pure white (#FFFFFF) background. A single ceramic cup with gentle warm steam, softly lit with natural daylight. Very shallow depth of field. Clean, minimal, premium mood like Apple lifestyle photography. No text. 16:9 aspect ratio. Ultra high quality.',
+    filename: 'bg-light.jpg',
+    prompt: 'A minimal classical Greek marble hand sculpture fragment, positioned in the lower-right corner, on pure white (#FFFFFF) background. The marble has clean white and very light gray tones. Extremely subtle soft shadows. The mood is elegant and airy. Museum white gallery photography aesthetic. Generous white space for text. No text, no logos. 16:9 aspect ratio. Ultra high quality.',
   },
-  // === 화이트 배경 — 마무리 ===
+  // === warm 슬라이드 배경 (베이지 위) ===
   {
-    filename: 'closing.jpg',
-    prompt: 'Two abstract soft light sources merging on pure white (#FFFFFF) background — one warm orange (#FF6B00) and one light gray. They blend gently in the center, creating a subtle warm gradient. Symbolizes human-AI collaboration. Extremely minimal, airy, premium. Apple product page feel. No text, no logos. 16:9 aspect ratio. Ultra high quality.',
+    filename: 'bg-warm.jpg',
+    prompt: 'A fragment of a classical Greek marble torso sculpture, positioned off-center, on warm beige (#F5F0EB) background. The marble tones blend with the warm beige — cream, ivory, light sand colors. Soft natural lighting from above. Serene, contemplative mood. Museum gallery with warm lighting. Generous negative space. No text, no logos. 16:9 aspect ratio. Ultra high quality.',
   },
-  // === 라이트 배경 슬라이드 — quad-card 내부 (카드 배경: #F5F5F7) ===
+  // === dark 슬라이드 배경 (#121212 위) ===
+  {
+    filename: 'bg-dark.jpg',
+    prompt: 'A dramatic classical Greek marble bust sculpture on very dark background (#121212 to #1A1A1A). The bust is positioned to the left, with dramatic side lighting in warm orange (#FF6B00) creating strong contrast between light and deep shadow. Only one side of the face is illuminated. Cinematic, moody, premium. Like a luxury fashion brand campaign shot in a dark museum. Generous dark space on the right. No text, no logos. 16:9 aspect ratio. Ultra high quality.',
+  },
+  // === quad-card 아이콘 이미지 (카드 내부, 라이트 배경) ===
   {
     filename: 'ai-text.jpg',
-    prompt: 'Minimal 3D illustration: a floating text document page with subtle sparkle particles around it. Background is light warm gray (#F5F5F7), seamlessly blending with the background. Single orange (#FF6B00) accent highlight on one line. Clean, soft shadows, Apple product page style. No text on the image. Square 1:1 format. Ultra high quality.',
+    prompt: 'Minimal 3D illustration: a floating text document page with subtle sparkle particles around it. Background is light warm gray (#F5F5F7), seamlessly blending. Single orange (#FF6B00) accent highlight on one line. Clean, soft shadows, Apple product page style. No text on the image. Square 1:1 format. Ultra high quality.',
   },
   {
     filename: 'ai-image.jpg',
@@ -54,7 +64,7 @@ const IMAGE_PROMPTS = [
     filename: 'ai-code.jpg',
     prompt: 'Minimal 3D illustration: a terminal or code editor window floating at a slight angle, with curly braces { } visible. Background is light warm gray (#F5F5F7), seamless. Single orange (#FF6B00) cursor or accent line. Soft shadows, Apple product page style. No text content. Square 1:1 format. Ultra high quality.',
   },
-  // === 라이트 배경 — paradigm-card 내부 ===
+  // === paradigm-card 이미지 ===
   {
     filename: 'paradigm-old.jpg',
     prompt: 'Minimal flat illustration: traditional desktop workspace with a monitor showing a complex software interface (like Photoshop toolbar layout), plus a spreadsheet icon and a Word document icon arranged neatly. Background is light warm gray (#F5F5F7), seamless. Muted gray and blue tones, slightly desaturated. Clean vector-like style. No text. 16:10 aspect ratio.',
@@ -63,11 +73,33 @@ const IMAGE_PROMPTS = [
     filename: 'paradigm-new.jpg',
     prompt: 'Very simple, minimal flat illustration: a single chat bubble icon and a small sparkle symbol on very light warm orange tint (#FFF5F0) background, seamless. Only two or three simple geometric shapes. Warm orange (#FF6B00) accent. Extremely clean, airy, lots of white space. No text. 16:10 aspect ratio.',
   },
+  // === 코드 시연 슬라이드 이미지 (dark 배경) ===
+  {
+    filename: 'screenshot-code.jpg',
+    prompt: 'Realistic screenshot of a modern dark terminal or code editor window. Dark background (#1A1A2E). Monospace font showing a coding assistant CLI conversation. User input line with a prompt symbol (>) followed by Korean-like text characters. Below it, the AI response shows colorful syntax-highlighted code (HTML/CSS) with orange, green, purple highlights. The terminal has a sleek title bar. Professional developer workspace aesthetic. No real readable text needed — just suggest the visual pattern of a terminal conversation. 16:9 aspect ratio. Ultra high quality.',
+  },
+  // === 커버/특수 이미지 ===
+  {
+    filename: 'cover-day1.jpg',
+    prompt: 'Full classical Greek marble statue (like David or Apollo), centered, on warm orange gradient background (#FF4500 to #FF8F64). The statue looks upward with an inspiring, visionary pose. Dramatic warm orange side lighting. Premium, powerful, modern museum meets fashion editorial. Bold composition. No text, no logos. 16:9 aspect ratio. Ultra high quality.',
+  },
+  {
+    filename: 'cover-day2.jpg',
+    prompt: 'Classical Greek marble bust with modern geometric overlay elements (thin orange lines), on warm orange gradient background (#FF4500 to #FF8F64). The bust faces slightly to the right. Blend of classical and futuristic. Dramatic lighting. Premium art direction. No text, no logos. 16:9 aspect ratio. Ultra high quality.',
+  },
+  {
+    filename: 'break.jpg',
+    prompt: 'Bright, airy coffee scene on warm beige (#F5F0EB) background. A single ceramic cup with gentle warm steam, softly lit with natural daylight. Very shallow depth of field. Clean, minimal, premium mood like Apple lifestyle photography. No text. 16:9 aspect ratio. Ultra high quality.',
+  },
+  {
+    filename: 'closing.jpg',
+    prompt: 'Two classical Greek marble hands reaching toward each other (like Michelangelo Creation of Adam composition) on warm orange gradient background (#FF4500 to #FF8F64). Warm golden orange lighting. Symbolizes human-AI connection. Dramatic, cinematic, premium. No text, no logos. 16:9 aspect ratio. Ultra high quality.',
+  },
 ];
 
 // Gemini API 호출
 async function generateImage(prompt) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image-preview:generateContent?key=${API_KEY}`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp-image-generation:generateContent?key=${API_KEY}`;
 
   const body = JSON.stringify({
     contents: [{
@@ -77,7 +109,6 @@ async function generateImage(prompt) {
     }],
     generationConfig: {
       responseModalities: ['IMAGE', 'TEXT'],
-      responseMimeType: 'application/json',
     }
   });
 
@@ -140,7 +171,7 @@ async function main() {
 
     // API rate limit 방지
     if (i < IMAGE_PROMPTS.length - 1) {
-      await new Promise(r => setTimeout(r, 2000));
+      await new Promise(r => setTimeout(r, 3000));
     }
   }
 
