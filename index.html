@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FM AI Education</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=99">
+</head>
+
+<body>
+
+  <!-- GNB -->
+  <header class="gnb">
+    <div class="gnb-left">
+      <img src="assets/logo.svg" alt="FM" class="gnb-logo">
+      <span class="gnb-divider"></span>
+      <span class="gnb-title">AI Education 2026</span>
+    </div>
+    <nav class="gnb-tabs">
+      <button class="gnb-tab active" data-day="1">Day 1</button>
+      <button class="gnb-tab" data-day="2">Day 2</button>
+    </nav>
+  </header>
+
+  <!-- Side Navigation -->
+  <nav class="side-nav" id="sideNav"></nav>
+
+  <!-- ==================== DAY 1 ==================== -->
+  <div class="day-container active" id="day1">
+    <div class="reveal" id="reveal1">
+      <div class="slides">
+
+        <!-- 1-0 표지 -->
+        <section data-nav="표지">
+          <div class="cover-bg-container">
+            <img src="assets/hero-bg.png" alt="" class="cover-bg-img">
+          </div>
+          <div class="slide-cover">
+            <div class="cover-badge">2026 FM 신입사원 교육</div>
+            <h1>
+              AI 기본개념과<br>
+              현재 FM의 AI 활용
+            </h1>
+            <p class="cover-sub">Day 1 of 2</p>
+          </div>
+        </section>
+
+        <!-- 1-1 아이스브레이킹: 이해도 체크 -->
+        <section data-nav="이해도 체크">
+          <div class="section-label">시작하기 전에</div>
+          <h2>여러분은 AI를<br>얼마나 가까이 쓰고 계신가요?</h2>
+          <div class="icebreak-grid">
+            <div class="icebreak-card anim">
+              <div class="icebreak-emoji">💬</div>
+              <div class="icebreak-q">ChatGPT, Claude, Gemini 중<br>써본 것이 있다</div>
+            </div>
+            <div class="icebreak-card anim">
+              <div class="icebreak-emoji">🎨</div>
+              <div class="icebreak-q">AI로 글이나 이미지를<br>만들어 본 적 있다</div>
+            </div>
+            <div class="icebreak-card anim">
+              <div class="icebreak-emoji">💼</div>
+              <div class="icebreak-q">업무(학교 포함)에<br>AI를 활용해봤다</div>
+            </div>
+            <div class="icebreak-card anim">
+              <div class="icebreak-emoji">🔮</div>
+              <div class="icebreak-q">AI가 내 직무를<br>바꿀 수 있다고 느낀다</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1-2 AI란: 한 문장 정의 -->
+        <section data-nav="AI란">
+          <div class="slide-statement">
+            <div class="section-label">AI, 한 문장으로</div>
+            <h2>
+              <span class="text-mask"><span class="mask-inner">사람이 하던 <span class="accent">판단</span>과 <span
+                    class="accent">창작</span>을</span></span>
+              <span class="text-mask"><span class="mask-inner">기계가 대신, 혹은 함께 할 수 있게 된 기술</span></span>
+            </h2>
+            <p class="statement-note">
+              핵심은 '대신'이 아니라 <strong>'함께'</strong>입니다 🤝
+            </p>
+          </div>
+        </section>
+
+        <!-- 1-3 생성형 AI의 종류 -->
+        <section data-nav="생성형 AI">
+          <div class="section-label">지금 쓸 수 있는 것들</div>
+          <h2>생성형 AI의 네 가지 영역</h2>
+          <div class="quad-grid">
+            <div class="quad-card anim">
+              <div class="quad-content">
+                <div class="quad-icon">✍️</div>
+                <div class="quad-label">텍스트 생성</div>
+                <div class="quad-desc">기획서, 카피, 보고서, 메일, 번역, 요약</div>
+                <div class="quad-tools">ChatGPT &middot; Claude &middot; Gemini</div>
+              </div>
+            </div>
+            <div class="quad-card anim">
+              <div class="quad-content">
+                <div class="quad-icon">🖼️</div>
+                <div class="quad-label">이미지 생성</div>
+                <div class="quad-desc">컨셉 시안, 무드보드, 제품 목업, 배경</div>
+                <div class="quad-tools">Midjourney &middot; DALL-E &middot; Imagen</div>
+              </div>
+            </div>
+            <div class="quad-card anim">
+              <div class="quad-content">
+                <div class="quad-icon">🎬</div>
+                <div class="quad-label">영상 생성</div>
+                <div class="quad-desc">숏폼 콘텐츠, 제품 영상, 이벤트 티저</div>
+                <div class="quad-tools">Sora &middot; Veo &middot; Runway</div>
+              </div>
+            </div>
+            <div class="quad-card anim">
+              <div class="quad-content">
+                <div class="quad-icon">💻</div>
+                <div class="quad-label">코드 생성</div>
+                <div class="quad-desc">웹사이트, 앱, 자동화, 데이터 분석</div>
+                <div class="quad-tools">Claude Code &middot; Cursor &middot; Copilot</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1-4 Before/After -->
+        <section data-nav="Before / After">
+          <div class="section-label">같은 일, 다른 속도</div>
+          <h2>AI 전과 후</h2>
+          <div class="ba-list">
+            <div class="ba-row anim">
+              <div class="ba-icon">💡</div>
+              <div class="ba-task">팝업 컨셉 아이디어 10개</div>
+              <div class="ba-before">
+                <span class="ba-tag before">Before</span>
+                <span class="ba-time">리서치 + 브레인스토밍 반나절</span>
+              </div>
+              <div class="ba-arrow">→</div>
+              <div class="ba-after">
+                <span class="ba-tag after">After</span>
+                <span class="ba-time">AI와 대화 10분, 정제 20분</span>
+              </div>
+            </div>
+            <div class="ba-row anim">
+              <div class="ba-icon">📄</div>
+              <div class="ba-task">제안서 초안 20페이지</div>
+              <div class="ba-before">
+                <span class="ba-tag before">Before</span>
+                <span class="ba-time">구조 잡기부터 이틀</span>
+              </div>
+              <div class="ba-arrow">→</div>
+              <div class="ba-after">
+                <span class="ba-tag after">After</span>
+                <span class="ba-time">AI 초안 30분 + 수정 반나절</span>
+              </div>
+            </div>
+            <div class="ba-row anim">
+              <div class="ba-icon">🏪</div>
+              <div class="ba-task">이벤트 공간 시안 이미지</div>
+              <div class="ba-before">
+                <span class="ba-tag before">Before</span>
+                <span class="ba-time">외부 디자이너 의뢰 3~5일</span>
+              </div>
+              <div class="ba-arrow">→</div>
+              <div class="ba-after">
+                <span class="ba-tag after">After</span>
+                <span class="ba-time">OrangeWhale에서 직접 생성 5분</span>
+              </div>
+            </div>
+            <div class="ba-row anim">
+              <div class="ba-icon">📋</div>
+              <div class="ba-task">운영 매뉴얼 + 체크리스트</div>
+              <div class="ba-before">
+                <span class="ba-tag before">Before</span>
+                <span class="ba-time">이전 행사 문서 찾아서 수정 반나절</span>
+              </div>
+              <div class="ba-arrow">→</div>
+              <div class="ba-after">
+                <span class="ba-tag after">After</span>
+                <span class="ba-time">행사 조건 입력 → 자동 생성 15분</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1-5 패러다임 전환: 도구를 배우는 시대 → 도구를 만드는 시대 -->
+        <section data-nav="패러다임 전환">
+          <div class="section-label">패러다임이 바뀌었습니다</div>
+          <h2>
+            <span class="text-mask"><span class="mask-inner">도구를 배우는 시대에서</span></span>
+            <span class="text-mask"><span class="mask-inner">필요한 도구를 만드는 시대로</span></span>
+          </h2>
+          <div class="paradigm-compare">
+            <div class="paradigm-card old anim">
+              <div class="paradigm-content">
+                <div class="paradigm-icon">📉</div>
+                <div class="paradigm-label">지금까지</div>
+                <div class="paradigm-title">남이 만든 도구를 배워서 쓰는 시대</div>
+                <div class="paradigm-tools">
+                  <span class="ptool">Photoshop</span>
+                  <span class="ptool">Illustrator</span>
+                  <span class="ptool">Excel</span>
+                  <span class="ptool">Word</span>
+                  <span class="ptool">PPT</span>
+                </div>
+                <div class="paradigm-desc"
+                  data-typetext="도구의 기능을 익히는 데 수개월~수년&#10;도구가 허락하는 범위 안에서만 작업&#10;필요한 기능이 없으면? 참거나 다른 도구를 또 배움">
+                  도구의 기능을 익히는 데 수개월~수년<br>
+                  도구가 허락하는 범위 안에서만 작업<br>
+                  필요한 기능이 없으면? 참거나 다른 도구를 또 배움
+                </div>
+              </div>
+              <div class="paradigm-card new anim">
+                <div class="paradigm-content">
+                  <div class="paradigm-icon">🚀</div>
+                  <div class="paradigm-label">지금부터</div>
+                  <div class="paradigm-title">내게 필요한 도구를 직접 만드는 시대</div>
+                  <div class="paradigm-tools">
+                    <span class="ptool accent-tool">OrangeWhale</span>
+                    <span class="ptool accent-tool">FM ERP</span>
+                    <span class="ptool accent-tool">나만의 자동화</span>
+                    <span class="ptool accent-tool">맞춤형 도구</span>
+                  </div>
+                  <div class="paradigm-desc"
+                    data-typetext="&quot;이런 게 있으면 좋겠는데&quot; → AI와 함께 직접 만듦&#10;우리 업무에 딱 맞는 시스템을 빠르게 구축&#10;도구에 나를 맞추는 게 아니라, 나에게 도구를 맞춤">
+                    "이런 게 있으면 좋겠는데" → AI와 함께 직접 만듦<br>
+                    우리 업무에 딱 맞는 시스템을 빠르게 구축<br>
+                    도구에 나를 맞추는 게 아니라, 나에게 도구를 맞춤
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <!-- 1-6 FM이 다른 점 -->
+        <section data-nav="FM의 실천">
+          <div class="slide-statement">
+            <div class="section-label">FM은 이미 시작했습니다</div>
+            <h2>
+              <span class="text-mask"><span class="mask-inner">외부에 맡기지 않고</span></span>
+              <span class="text-mask"><span class="mask-inner"><span class="accent">필요한 도구를 직접 만들고
+                    있습니다</span></span></span>
+            </h2>
+            <p class="statement-sub">
+              AI 디자인 도구 <span class="accent">OrangeWhale</span>,<br>
+              사내 업무 시스템 <span class="accent">ERP</span> — 모두 내재화로 구축 중
+            </p>
+          </div>
+        </section>
+
+        <!-- 1-6 FM AI 프로젝트 개요 -->
+        <section data-nav="FM 프로젝트">
+          <div class="section-label">현재 진행 중인 프로젝트</div>
+          <h2>FM의 두 가지 AI 프로젝트</h2>
+          <div class="project-grid">
+            <div class="project-card anim">
+              <div class="project-emoji">🏗️</div>
+              <div class="project-name">FM ERP</div>
+              <div class="project-oneliner">외주 없이 사내에서 직접 만드는 업무 관리 시스템</div>
+              <div class="project-details">
+                <div class="project-detail">📊 프로젝트 관리 &middot; 일정 &middot; 정산 &middot; 인사</div>
+                <div class="project-detail">🤖 AI 도구를 활용해 기획부터 개발까지 내재화</div>
+                <div class="project-detail">👥 여러분이 앞으로 매일 쓰게 될 시스템</div>
+              </div>
+            </div>
+            <div class="project-card featured">
+              <div class="project-emoji">🐋</div>
+              <div class="project-name">OrangeWhale</div>
+              <div class="project-oneliner">FM이 직접 만든 AI 이미지/영상 생성 도구</div>
+              <div class="project-details">
+                <div class="project-detail">✨ 텍스트 → 이미지 &middot; 영상 생성</div>
+                <div class="project-detail">🎛️ 목업 &middot; 배경제거 &middot; 업스케일 &middot; 편집</div>
+                <div class="project-detail">🔗 Wave 노드 에디터로 AI 파이프라인 구성</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1-7 ERP 시연 -->
+        <section data-nav="ERP 시연">
+          <div class="split-layout">
+            <div class="split-text">
+              <div class="demo-badge">LIVE DEMO</div>
+              <h2>FM ERP 시스템</h2>
+              <div class="demo-narrative">
+                <p>외주 개발사에 맡기지 않고,<br>AI 도구를 활용해 <strong>사내에서 직접 설계하고 개발</strong>하고 있습니다.</p>
+              </div>
+              <div class="demo-points">
+                <div class="demo-point anim">
+                  <span class="point-bar"></span>
+                  <span class="point-text">프로모션별 프로젝트 관리와 진행 현황</span>
+                </div>
+                <div class="demo-point anim">
+                  <span class="point-bar"></span>
+                  <span class="point-text">팀원 배정, 일정, 정산까지 한 곳에서</span>
+                </div>
+                <div class="demo-point anim">
+                  <span class="point-bar"></span>
+                  <span class="point-text">필요한 기능을 직접, 빠르게 추가 가능</span>
+                </div>
+              </div>
+            </div>
+            <div class="split-visual">
+              <div class="device-frame">
+                <img src="assets/screenshot-erp.png" alt="FM ERP 대시보드">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1-8 OrangeWhale 시연 -->
+        <section data-nav="OrangeWhale 시연">
+          <div class="split-layout">
+            <div class="split-text">
+              <div class="demo-badge">LIVE DEMO</div>
+              <h2>OrangeWhale</h2>
+              <div class="demo-narrative">
+                <p>외부 서비스에 의존하지 않고,<br>우리 업무에 맞는 <strong>AI 디자인 도구를 사내에서 직접 구축</strong>하고 있습니다.</p>
+              </div>
+              <div class="demo-points">
+                <div class="demo-point anim">
+                  <span class="point-bar"></span>
+                  <span class="point-text">텍스트 한 줄로 이벤트 시안 이미지 생성</span>
+                </div>
+                <div class="demo-point anim">
+                  <span class="point-bar"></span>
+                  <span class="point-text">제품 목업, 배경 합성, 업스케일까지</span>
+                </div>
+                <div class="demo-point anim">
+                  <span class="point-bar"></span>
+                  <span class="point-text">이미지에서 바로 영상으로 — 숏폼 티저 제작</span>
+                </div>
+                <div class="demo-point anim">
+                  <span class="point-bar"></span>
+                  <span class="point-text">Wave 에디터 — 여러 AI를 연결한 자동화 파이프라인</span>
+                </div>
+              </div>
+            </div>
+            <div class="split-visual">
+              <div class="device-frame">
+                <img src="assets/screenshot-ow.png" alt="OrangeWhale 에디터">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1-9 핵심 메시지 -->
+        <section data-nav="오늘의 핵심">
+          <div class="slide-statement closing">
+            <h2>
+              <span class="text-mask"><span class="mask-inner">AI는 <span class="accent">기획자를 대체</span>하지
+                  않습니다</span></span>
+            </h2>
+            <p class="statement-sub">
+              AI를 잘 다루는 기획자가<br>
+              <span class="accent">더 많은 시도를, 더 빠르게</span> 할 수 있게 됩니다
+            </p>
+            <p class="statement-note">
+              내일 Day 2에서는 여러분의 업무에 직접 적용하는 방법을 다룹니다 →
+            </p>
+          </div>
+        </section>
+
+        <!-- 1-10 Q&A -->
+        <section data-nav="Q&A">
+          <div class="slide-cover">
+            <div class="qa-emoji">🙋‍♀️ 🙋‍♂️</div>
+            <h2>질문 & 이야기</h2>
+            <p class="cover-sub">편하게 질문해주세요</p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== DAY 2 ==================== -->
+  <div class="day-container" id="day2">
+    <div class="reveal" id="reveal2">
+      <div class="slides">
+
+        <!-- 2-0 표지 -->
+        <section data-nav="표지">
+          <div class="slide-cover">
+            <div class="cover-badge">2026 FM 신입사원 교육</div>
+            <h1>
+              <span class="text-mask"><span class="mask-inner">내 업무에</span></span>
+              <span class="text-mask"><span class="mask-inner">AI 적용하기</span></span>
+            </h1>
+            <p class="cover-sub">Day 2 of 2</p>
+          </div>
+        </section>
+
+        <!-- ===== 전반 40분 ===== -->
+
+        <!-- 2-1 어제 복습 -->
+        <section data-nav="어제 복습">
+          <div class="section-label">Day 1 복습</div>
+          <h2>어제 우리가 본 것</h2>
+          <div class="recap-list">
+            <div class="recap-item anim">
+              <span class="recap-num">01</span>
+              <div class="recap-content">
+                🧠 <strong>생성형 AI</strong>는 텍스트 / 이미지 / 영상 / 코드를 만들 수 있다
+              </div>
+            </div>
+            <div class="recap-item anim">
+              <span class="recap-num">02</span>
+              <div class="recap-content">
+                🏢 FM은 AI로 <strong>ERP 시스템</strong>과 <strong>OrangeWhale</strong>을 직접 만들고 있다
+              </div>
+            </div>
+            <div class="recap-item anim">
+              <span class="recap-num">03</span>
+              <div class="recap-content">
+                🚀 AI는 대체가 아니라 <strong>기획자의 역량을 확장</strong>하는 도구다
+              </div>
+            </div>
+          </div>
+          <p class="recap-lead">오늘은 <strong>여러분의 업무</strong>에 직접 연결합니다</p>
+        </section>
+
+        <!-- 2-2 플래너의 업무 흐름 -->
+        <section data-nav="업무 흐름">
+          <div class="section-label">우리의 일</div>
+          <h2>프로모션 플래너는 이렇게 일합니다</h2>
+          <div class="workflow">
+            <div class="wf-step anim">
+              <div class="wf-phase">Phase 1</div>
+              <div class="wf-emoji">🔍</div>
+              <div class="wf-name">브리프 분석</div>
+              <div class="wf-desc">클라이언트 요구사항 파악, 시장 조사, 벤치마킹</div>
+              <div class="wf-ai">🤖 AI 투입 가능</div>
+            </div>
+            <div class="wf-step anim">
+              <div class="wf-phase">Phase 2</div>
+              <div class="wf-emoji">💡</div>
+              <div class="wf-name">기획 &middot; 컨셉</div>
+              <div class="wf-desc">아이디어 발산, 컨셉 설정, 공간/경험 설계</div>
+              <div class="wf-ai">🤖 AI 투입 가능</div>
+            </div>
+            <div class="wf-step anim">
+              <div class="wf-phase">Phase 3</div>
+              <div class="wf-emoji">📝</div>
+              <div class="wf-name">제안서 작성</div>
+              <div class="wf-desc">기획 구조화, 시안 제작, 예산 편성, 발표 준비</div>
+              <div class="wf-ai">🤖 AI 투입 가능</div>
+            </div>
+            <div class="wf-step anim">
+              <div class="wf-phase">Phase 4</div>
+              <div class="wf-emoji">⚙️</div>
+              <div class="wf-name">실행 &middot; 운영</div>
+              <div class="wf-desc">현장 세팅, 협력사 관리, 운영 매뉴얼, 커뮤니케이션</div>
+              <div class="wf-ai">🤖 AI 투입 가능</div>
+            </div>
+            <div class="wf-step anim">
+              <div class="wf-phase">Phase 5</div>
+              <div class="wf-emoji">📊</div>
+              <div class="wf-name">결과 보고</div>
+              <div class="wf-desc">성과 정리, 데이터 분석, 인사이트 도출</div>
+              <div class="wf-ai">🤖 AI 투입 가능</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2-3 기획 단계 구체적 활용 -->
+        <section data-nav="기획에 AI">
+          <div class="section-label">Phase 1~2 &middot; 브리프 분석 &amp; 기획</div>
+          <h2>기획 단계에서 AI는 이렇게 씁니다</h2>
+          <div class="prompt-showcase">
+            <div class="prompt-card anim">
+              <div class="prompt-title">💡 컨셉 발산</div>
+              <div class="prompt-example">
+                <div class="prompt-tag">프롬프트 예시</div>
+                <p>"글로벌 스포츠 브랜드의 러닝 커뮤니티 런칭 팝업을 기획 중이야. 2030 남녀 타겟, 성수동, 3일간 운영. 차별화된 공간 컨셉과 체험 프로그램 아이디어를 각각 5개씩 제안해줘.
+                  각 안에 예상 비용 범위도 포함해."</p>
+              </div>
+              <div class="prompt-result">단순 키워드가 아니라, 조건을 구체적으로 줄수록 실무에 바로 쓸 수 있는 결과가 나옵니다</div>
+            </div>
+            <div class="prompt-card anim">
+              <div class="prompt-title">🔍 트렌드 리서치</div>
+              <div class="prompt-example">
+                <div class="prompt-tag">프롬프트 예시</div>
+                <p>"2025~2026년 국내 팝업스토어 트렌드를 정리해줘. 특히 뷰티/패션 카테고리에서 성공한 사례 5개를 성공 요인과 함께 분석해. 표로 정리해줘."</p>
+              </div>
+              <div class="prompt-result">리서치 초안을 AI가 잡아주면, 여러분은 검증과 인사이트 도출에 시간을 집중할 수 있습니다</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2-4 제안서 단계 -->
+        <section data-nav="제안서에 AI">
+          <div class="section-label">Phase 3 &middot; 제안서 작성</div>
+          <h2>제안서 작업에서 AI는 이렇게 씁니다</h2>
+          <div class="prompt-showcase">
+            <div class="prompt-card anim">
+              <div class="prompt-title">📑 제안서 구조 + 초안</div>
+              <div class="prompt-example">
+                <div class="prompt-tag">프롬프트 예시</div>
+                <p>"아래 브리프를 바탕으로 프로모션 제안서 목차를 잡아줘. [브리프 붙여넣기] 각 섹션마다 들어갈 핵심 내용을 2~3줄로 정리해주고, 전체 분량은 PPT 20장 기준으로 배분해줘."
+                </p>
+              </div>
+              <div class="prompt-result">빈 화면에서 시작하는 것과, 구조가 잡힌 상태에서 시작하는 것은 체감 속도가 완전히 다릅니다</div>
+            </div>
+            <div class="prompt-card anim">
+              <div class="prompt-title">🖼️ 시안 이미지 생성</div>
+              <div class="prompt-example">
+                <div class="prompt-tag">OrangeWhale 활용</div>
+                <p>컨셉 키워드만 입력하면 팝업 공간 이미지, 부스 배치 시안, 키비주얼 시안을 바로 생성할 수 있습니다. 디자이너 의뢰 전에 방향 확인용으로 활용.</p>
+              </div>
+              <div class="prompt-result">완성 시안이 아니라 '방향 확인용' — 이 구분이 중요합니다</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2-5 실행/운영 단계 -->
+        <section data-nav="실행에 AI">
+          <div class="section-label">Phase 4~5 &middot; 실행 &amp; 보고</div>
+          <h2>실행과 보고에서 AI는 이렇게 씁니다</h2>
+          <div class="prompt-showcase">
+            <div class="prompt-card anim">
+              <div class="prompt-title">📋 운영 매뉴얼 자동 생성</div>
+              <div class="prompt-example">
+                <div class="prompt-tag">프롬프트 예시</div>
+                <p>"성수동에서 3일간 진행하는 뷰티 팝업 행사야. 예상 방문객 일 300명. D-14부터 D+1까지 운영 체크리스트를 만들어줘. 시설, 인력, 케이터링, 안전, 철수까지 포함해."
+                </p>
+              </div>
+              <div class="prompt-result">경험 많은 선배가 잡아주는 체크리스트와 비슷한 품질을 빠르게 얻을 수 있습니다</div>
+            </div>
+            <div class="prompt-card anim">
+              <div class="prompt-title">📊 결과 보고서 구조화</div>
+              <div class="prompt-example">
+                <div class="prompt-tag">프롬프트 예시</div>
+                <p>"아래 데이터를 기반으로 프로모션 결과 보고서를 작성해줘. [방문객 수, SNS 도달수, 매출 데이터 등] KPI 대비 달성률, 주요 성과, 개선점, 다음 프로모션 제언을 포함해."
+                </p>
+              </div>
+              <div class="prompt-result">데이터를 구조화하고 인사이트를 뽑는 작업 — AI가 초안을 잡으면 여러분이 판단에 집중합니다</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2-6 프롬프트 원칙 -->
+        <section data-nav="프롬프트 원칙">
+          <div class="section-label">프롬프트 엔지니어링</div>
+          <h2>같은 AI, 다른 결과 — 프롬프트의 차이</h2>
+          <div class="compare-block">
+            <div class="compare-bad">
+              <div class="compare-label bad">이렇게 쓰면</div>
+              <p class="compare-text">"팝업 기획해줘"</p>
+              <p class="compare-result">→ 교과서 같은 일반론이 나옵니다</p>
+            </div>
+            <div class="compare-good">
+              <div class="compare-label good">이렇게 쓰면</div>
+              <p class="compare-text">"너는 10년차 프로모션 기획자야. 글로벌 코스메틱 브랜드 신제품 런칭 팝업을 기획 중이야. 타겟은 25~35세 여성, 장소는 한남동, 기간 5일,
+                예산 8천만원. 체험형 + 포토존 중심 컨셉을 3안으로 제안해줘. 각 안에 예상 동선과 주요 콘텐츠를 포함해."</p>
+              <p class="compare-result">→ 바로 제안서에 넣을 수 있는 수준이 나옵니다</p>
+            </div>
+          </div>
+          <div class="principle-summary">
+            <span class="ps-item"><strong>역할</strong>을 주고</span>
+            <span class="ps-divider"></span>
+            <span class="ps-item"><strong>맥락</strong>을 충분히 주고</span>
+            <span class="ps-divider"></span>
+            <span class="ps-item"><strong>출력 형태</strong>를 지정하세요</span>
+          </div>
+        </section>
+
+        <!-- 2-7 프롬프트에서 컨텍스트로 -->
+        <section data-nav="컨텍스트 시대">
+          <div class="section-label">2026년, 이미 달라진 것</div>
+          <h2>
+            <span class="text-mask"><span class="mask-inner">프롬프트의 시대에서</span></span>
+            <span class="text-mask"><span class="mask-inner">컨텍스트의 시대로</span></span>
+          </h2>
+          <div class="era-compare">
+            <div class="era-card past anim">
+              <div class="era-label">작년까지</div>
+              <div class="era-title">프롬프트 중심</div>
+              <div class="era-items">
+                <div class="era-item">"잘 물어보는 기술"이 핵심</div>
+                <div class="era-item">한 번에 한 가지 질문 → 한 가지 답변</div>
+                <div class="era-item">대화가 끝나면 AI는 다 잊어버림</div>
+                <div class="era-item">매번 처음부터 설명해야 했음</div>
+              </div>
+            </div>
+            <div class="era-card now anim">
+              <div class="era-label">지금</div>
+              <div class="era-title">컨텍스트 중심</div>
+              <div class="era-items">
+                <div class="era-item">"맥락을 얼마나 잘 주느냐"가 핵심</div>
+                <div class="era-item">프로젝트 전체를 AI에게 이해시킴</div>
+                <div class="era-item">AI가 나의 업무 방식을 기억하고 학습</div>
+                <div class="era-item">AI가 먼저 제안하고, 사람이 판단</div>
+              </div>
+            </div>
+          </div>
+          <div class="era-bottom anim">
+            <p>프롬프트를 잘 쓰는 것은 기본이고,<br><strong>AI에게 얼마나 좋은 맥락을 줄 수 있느냐</strong>가 결과의 차이를 만듭니다</p>
+          </div>
+        </section>
+
+        <!-- 2-8 쉬는 시간 -->
+        <section data-nav="Break">
+          <div class="slide-cover">
+            <div class="qa-emoji">☕</div>
+            <h2>잠시 쉬어갑니다</h2>
+            <p class="cover-sub">돌아와서 직접 만들어봅니다</p>
+          </div>
+        </section>
+
+        <!-- ===== 후반 40분 ===== -->
+
+        <!-- 2-8 실습 안내 -->
+        <section data-nav="실습 안내">
+          <div class="section-label">Hands-on</div>
+          <h2>직접 해봅시다</h2>
+          <div class="hands-on-flow">
+            <div class="ho-step anim">
+              <div class="ho-num">📄</div>
+              <div class="ho-content">
+                <div class="ho-title">가상 브리프 확인</div>
+                <div class="ho-desc">다음 슬라이드의 클라이언트 브리프를 읽으세요</div>
+              </div>
+            </div>
+            <div class="ho-step anim">
+              <div class="ho-num">🐋</div>
+              <div class="ho-content">
+                <div class="ho-title">OrangeWhale에서 이미지 생성</div>
+                <div class="ho-desc">브리프의 키워드로 팝업 공간 컨셉 이미지를 만들어보세요</div>
+              </div>
+            </div>
+            <div class="ho-step anim">
+              <div class="ho-num">💬</div>
+              <div class="ho-content">
+                <div class="ho-title">결과물 공유 &middot; 피드백</div>
+                <div class="ho-desc">만든 이미지를 함께 보면서 이야기합니다</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2-9 가상 브리프 -->
+        <section data-nav="가상 브리프">
+          <div class="section-label">실습 미션</div>
+          <h2>가상 브리프</h2>
+          <div class="brief-card">
+            <div class="brief-header">Client Brief</div>
+            <div class="brief-body">
+              <div class="brief-row">
+                <span class="brief-label">클라이언트</span>
+                <span class="brief-value">글로벌 뷰티 브랜드 A</span>
+              </div>
+              <div class="brief-row">
+                <span class="brief-label">행사 유형</span>
+                <span class="brief-value">신제품 런칭 팝업 스토어</span>
+              </div>
+              <div class="brief-row">
+                <span class="brief-label">장소</span>
+                <span class="brief-value">성수동 복합문화공간</span>
+              </div>
+              <div class="brief-row">
+                <span class="brief-label">기간</span>
+                <span class="brief-value">3일 (금~일)</span>
+              </div>
+              <div class="brief-row">
+                <span class="brief-label">타겟</span>
+                <span class="brief-value">20~30대 여성, 클린뷰티에 관심</span>
+              </div>
+              <div class="brief-row">
+                <span class="brief-label">컨셉 키워드</span>
+                <span class="brief-value">자연 &middot; 투명 &middot; 감성 &middot; 체험형</span>
+              </div>
+              <div class="brief-row mission">
+                <span class="brief-label">미션</span>
+                <span class="brief-value">OrangeWhale로 팝업 공간 컨셉 이미지 3장 생성</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2-10 코드 시연 -->
+        <section data-nav="코드 시연">
+          <div class="split-layout">
+            <div class="split-text">
+              <div class="demo-badge">LIVE DEMO</div>
+              <h2>참고: AI가 코드를<br>짜는 모습</h2>
+              <div class="demo-narrative">
+                <p>지금 보고 계신 이 프레젠테이션도<br><strong>Claude Code</strong>라는 AI 코딩 도구와 함께 만들었습니다.</p>
+              </div>
+              <div class="demo-points">
+                <div class="demo-point anim">
+                  <span class="point-bar"></span>
+                  <span class="point-text">터미널에서 한국어로 지시하면 AI가 코드를 작성</span>
+                </div>
+                <div class="demo-point anim">
+                  <span class="point-bar"></span>
+                  <span class="point-text">디자인, 구조, 콘텐츠를 대화하면서 수정</span>
+                </div>
+                <div class="demo-point anim">
+                  <span class="point-bar"></span>
+                  <span class="point-text">코딩을 몰라도, 원하는 것을 명확히 말하면 됩니다</span>
+                </div>
+              </div>
+            </div>
+            <div class="split-visual">
+              <div class="device-frame">
+                <img src="assets/screenshot-code.png" alt="Claude Code 터미널">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2-11 내일부터 -->
+        <section data-nav="내일부터">
+          <div class="section-label">Action Items</div>
+          <h2>내일부터 바로 시작할 수 있는 것</h2>
+          <div class="action-grid">
+            <div class="action-card anim">
+              <div class="action-emoji">💡</div>
+              <div class="action-when">기획할 때</div>
+              <div class="action-what">Claude나 ChatGPT에 브리프를 넣고<br>컨셉 아이디어 발산부터 시작해보세요</div>
+            </div>
+            <div class="action-card anim">
+              <div class="action-emoji">📝</div>
+              <div class="action-when">제안서 쓸 때</div>
+              <div class="action-what">빈 화면 대신,<br>AI에게 구조와 초안을 먼저 받으세요</div>
+            </div>
+            <div class="action-card anim">
+              <div class="action-emoji">🎨</div>
+              <div class="action-when">시안이 필요할 때</div>
+              <div class="action-what">OrangeWhale에서 컨셉 이미지를<br>직접 만들어 방향을 잡으세요</div>
+            </div>
+            <div class="action-card anim">
+              <div class="action-emoji">📊</div>
+              <div class="action-when">보고할 때</div>
+              <div class="action-what">데이터를 AI에 넣고<br>인사이트 초안을 먼저 뽑아보세요</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2-12 마무리 -->
+        <section data-nav="마무리">
+          <div class="slide-cover">
+            <div class="slide-statement closing">
+              <h2>
+                <span class="text-mask"><span class="mask-inner">AI를 잘 쓰는 기획자가</span></span>
+                <span class="text-mask"><span class="mask-inner"><span class="accent">더 많이 시도하고, 더 빨리
+                      배웁니다</span></span></span>
+              </h2>
+              <p class="statement-note">
+                도구는 이미 준비되어 있습니다.<br>오늘부터 써보세요.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2-13 Q&A -->
+        <section data-nav="Q&A">
+          <div class="slide-cover">
+            <div class="qa-emoji">🙋‍♀️ 🙋‍♂️</div>
+            <h2>질문 & 이야기</h2>
+            <p class="cover-sub">편하게 질문해주세요</p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="app.js?v=7"></script>
+</body>
+
+</html>
