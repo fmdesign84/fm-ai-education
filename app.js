@@ -205,16 +205,10 @@
     });
   }
 
-  // ==================== GNB Style (Always Dark) ====================
+  // ==================== GNB Style (Light Mode) ====================
 
   function updateGnbStyle(slide) {
-    // Premium Dark Theme implies GNB is always dark/glass
-    // No switching needed, but we keep the function structure for compatibility 
-    // in case we need dynamic transparency later.
-    var gnb = document.querySelector('.gnb');
-    var sideNav = document.querySelector('.side-nav');
-    if (gnb) gnb.classList.add('gnb-dark');
-    if (sideNav) sideNav.classList.add('side-nav-dark');
+    // Keep GNB dark (Premium). Do nothing.
   }
 
   // ==================== Day 전환 ====================
