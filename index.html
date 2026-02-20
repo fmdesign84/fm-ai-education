@@ -41,7 +41,7 @@
             <div class="cover-badge">2026 FM 신입사원 교육</div>
             <h1>
               AI 기본개념과<br>
-              현재 FM의 AI 활용
+              현재 FM의 <span class="accent">AI 활용</span>
             </h1>
             <p class="cover-sub">Day 1 of 2</p>
           </div>
@@ -50,7 +50,7 @@
         <!-- 1-1 아이스브레이킹: 이해도 체크 -->
         <section data-nav="이해도 체크" data-theme="warm">
           <div class="section-label">시작하기 전에</div>
-          <h2>여러분은 AI를<br>얼마나 가까이 쓰고 계신가요?</h2>
+          <h2>여러분은 AI를<br><span class="accent">얼마나 가까이</span> 쓰고 계신가요?</h2>
           <div class="icebreak-grid">
             <div class="icebreak-card anim">
               <div class="icebreak-emoji">💬</div>
@@ -89,12 +89,12 @@
         <!-- 1-3 생성형 AI의 종류 -->
         <section data-nav="생성형 AI" data-theme="warm">
           <div class="section-label">지금 쓸 수 있는 것들</div>
-          <h2>생성형 AI의 네 가지 영역</h2>
+          <h2>생성형 AI의 <span class="accent">네 가지 영역</span></h2>
           <div class="quad-grid">
             <div class="quad-card anim">
               <div class="quad-content">
                 <div class="quad-icon">✍️</div>
-                <div class="quad-label">텍스트 생성</div>
+                <div class="quad-label"><span class="accent">텍스트</span> 생성</div>
                 <div class="quad-desc">기획서, 카피, 보고서, 메일, 번역, 요약</div>
                 <div class="quad-tools">ChatGPT &middot; Claude &middot; Gemini</div>
               </div>
@@ -102,7 +102,7 @@
             <div class="quad-card anim">
               <div class="quad-content">
                 <div class="quad-icon">🖼️</div>
-                <div class="quad-label">이미지 생성</div>
+                <div class="quad-label"><span class="accent">이미지</span> 생성</div>
                 <div class="quad-desc">컨셉 시안, 무드보드, 제품 목업, 배경</div>
                 <div class="quad-tools">Midjourney &middot; DALL-E &middot; Imagen</div>
               </div>
@@ -110,7 +110,7 @@
             <div class="quad-card anim">
               <div class="quad-content">
                 <div class="quad-icon">🎬</div>
-                <div class="quad-label">영상 생성</div>
+                <div class="quad-label"><span class="accent">영상</span> 생성</div>
                 <div class="quad-desc">숏폼 콘텐츠, 제품 영상, 이벤트 티저</div>
                 <div class="quad-tools">Sora &middot; Veo &middot; Runway</div>
               </div>
@@ -118,7 +118,7 @@
             <div class="quad-card anim">
               <div class="quad-content">
                 <div class="quad-icon">💻</div>
-                <div class="quad-label">코드 생성</div>
+                <div class="quad-label"><span class="accent">코드</span> 생성</div>
                 <div class="quad-desc">웹사이트, 앱, 자동화, 데이터 분석</div>
                 <div class="quad-tools">Claude Code &middot; Cursor &middot; Copilot</div>
               </div>
@@ -126,13 +126,95 @@
           </div>
         </section>
 
+        <!-- 1-3b 좋은 프롬프트의 기본 구성 -->
+        <section data-nav="프롬프트 기본" data-theme="warm">
+          <div class="section-label">AI에게 잘 시키는 법</div>
+          <h2>좋은 프롬프트의 <span class="accent">기본 구성</span></h2>
+          <div class="prompt-elements">
+            <div class="pe-card anim">
+              <div class="pe-num">1</div>
+              <div class="pe-content">
+                <div class="pe-title"><span class="accent">역할</span> 부여</div>
+                <div class="pe-desc">AI에게 전문가 페르소나를 지정</div>
+                <div class="pe-example">"너는 10년차 프로모션 기획자야"</div>
+              </div>
+            </div>
+            <div class="pe-card anim">
+              <div class="pe-num">2</div>
+              <div class="pe-content">
+                <div class="pe-title"><span class="accent">맥락</span> 제공</div>
+                <div class="pe-desc">배경, 조건, 제약사항을 구체적으로</div>
+                <div class="pe-example">"뷰티 브랜드 팝업, 성수동, 3일, 예산 5천만원"</div>
+              </div>
+            </div>
+            <div class="pe-card anim">
+              <div class="pe-num">3</div>
+              <div class="pe-content">
+                <div class="pe-title"><span class="accent">지시</span> 명확화</div>
+                <div class="pe-desc">원하는 행동을 구체적으로 요청</div>
+                <div class="pe-example">"컨셉 3안을 비교표로 정리해줘"</div>
+              </div>
+            </div>
+            <div class="pe-card anim">
+              <div class="pe-num">4</div>
+              <div class="pe-content">
+                <div class="pe-title"><span class="accent">출력</span> 형식 지정</div>
+                <div class="pe-desc">결과물의 형태와 분량을 명시</div>
+                <div class="pe-example">"표 형식, 각 안당 200자 이내"</div>
+              </div>
+            </div>
+          </div>
+          <p class="pe-bottom">이 네 가지만 갖춰도 결과가 <strong>확연히</strong> 달라집니다</p>
+        </section>
+
+        <!-- 1-3c 이미지 생성 프롬프트 구성 -->
+        <section data-nav="이미지 프롬프트" data-theme="warm">
+          <div class="section-label">이미지 AI에게 잘 시키는 법</div>
+          <h2>이미지 프롬프트의 <span class="accent">기본 구성</span></h2>
+          <div class="prompt-elements">
+            <div class="pe-card anim">
+              <div class="pe-num">1</div>
+              <div class="pe-content">
+                <div class="pe-title"><span class="accent">주제</span> Subject</div>
+                <div class="pe-desc">무엇을 그릴 것인가 — 핵심 피사체</div>
+                <div class="pe-example">"뷰티 브랜드 팝업스토어 외관"</div>
+              </div>
+            </div>
+            <div class="pe-card anim">
+              <div class="pe-num">2</div>
+              <div class="pe-content">
+                <div class="pe-title"><span class="accent">스타일</span> Style</div>
+                <div class="pe-desc">사진풍, 일러스트, 3D, 수채화 등</div>
+                <div class="pe-example">"미니멀 건축 사진, 자연광"</div>
+              </div>
+            </div>
+            <div class="pe-card anim">
+              <div class="pe-num">3</div>
+              <div class="pe-content">
+                <div class="pe-title"><span class="accent">분위기</span> Mood</div>
+                <div class="pe-desc">색감, 톤, 감정, 시간대</div>
+                <div class="pe-example">"따뜻하고 부드러운, 골든아워 조명"</div>
+              </div>
+            </div>
+            <div class="pe-card anim">
+              <div class="pe-num">4</div>
+              <div class="pe-content">
+                <div class="pe-title"><span class="accent">디테일</span> Detail</div>
+                <div class="pe-desc">구도, 비율, 해상도, 제외 요소</div>
+                <div class="pe-example">"정면 뷰, 16:9, 사람 없이"</div>
+              </div>
+            </div>
+          </div>
+          <p class="pe-bottom">텍스트 프롬프트와 마찬가지로, <strong>구체적일수록</strong> 원하는 이미지에 가까워집니다</p>
+        </section>
+
         <!-- 1-4 Before/After -->
         <section data-nav="Before / After" data-theme="warm">
           <div class="section-label">같은 일, 다른 속도</div>
-          <h2>AI 전과 후</h2>
+          <h2>AI <span class="accent">전과 후</span></h2>
           <div class="ba-list">
             <div class="ba-row anim">
-              <div class="ba-task">💡 팝업 컨셉 아이디어 10개</div>
+              <div class="ba-task">💡 팝업 컨셉 <span class="accent">아이디어 10개</span></div>
               <div class="ba-before">
                 <span class="ba-tag before">Before</span>
                 <span class="ba-time">리서치 + 브레인스토밍 반나절</span>
@@ -144,7 +226,7 @@
               </div>
             </div>
             <div class="ba-row anim">
-              <div class="ba-task">📄 제안서 초안 20페이지</div>
+              <div class="ba-task">📄 제안서 <span class="accent">초안 20페이지</span></div>
               <div class="ba-before">
                 <span class="ba-tag before">Before</span>
                 <span class="ba-time">구조 잡기부터 이틀</span>
@@ -156,7 +238,7 @@
               </div>
             </div>
             <div class="ba-row anim">
-              <div class="ba-task">🏪 이벤트 공간 시안 이미지</div>
+              <div class="ba-task">🏪 이벤트 공간 <span class="accent">시안 이미지</span></div>
               <div class="ba-before">
                 <span class="ba-tag before">Before</span>
                 <span class="ba-time">외부 디자이너 의뢰 3~5일</span>
@@ -168,7 +250,7 @@
               </div>
             </div>
             <div class="ba-row anim">
-              <div class="ba-task">📋 운영 매뉴얼 + 체크리스트</div>
+              <div class="ba-task">📋 운영 매뉴얼 + <span class="accent">체크리스트</span></div>
               <div class="ba-before">
                 <span class="ba-tag before">Before</span>
                 <span class="ba-time">이전 행사 문서 찾아서 수정 반나절</span>
@@ -187,14 +269,14 @@
           <div class="section-label">패러다임이 바뀌었습니다</div>
           <h2>
             <span class="text-mask"><span class="mask-inner">도구를 배우는 시대에서</span></span>
-            <span class="text-mask"><span class="mask-inner">필요한 도구를 만드는 시대로</span></span>
+            <span class="text-mask"><span class="mask-inner"><span class="accent">필요한 도구를 만드는</span> 시대로</span></span>
           </h2>
           <div class="paradigm-compare">
             <div class="paradigm-card old anim">
               <div class="paradigm-content">
                 <div class="paradigm-icon">📉</div>
                 <div class="paradigm-label">지금까지</div>
-                <div class="paradigm-title">남이 만든 도구를<br>배워서 쓰는 시대</div>
+                <div class="paradigm-title">남이 만든 도구를<br><span class="accent">배워서 쓰는</span> 시대</div>
                 <div class="paradigm-tools">
                   <span class="ptool">Photoshop</span>
                   <span class="ptool">Illustrator</span>
@@ -213,7 +295,7 @@
               <div class="paradigm-content">
                 <div class="paradigm-icon">🚀</div>
                 <div class="paradigm-label">지금부터</div>
-                <div class="paradigm-title">내게 필요한 도구를<br>직접 만드는 시대</div>
+                <div class="paradigm-title">내게 필요한 도구를<br><span class="accent">직접 만드는</span> 시대</div>
                 <div class="paradigm-tools">
                   <span class="ptool accent-tool">OrangeWhale</span>
                   <span class="ptool accent-tool">FM ERP</span>
@@ -242,7 +324,7 @@
           <div class="evolution-timeline">
             <div class="evo-step anim">
               <div class="evo-level">Level 1</div>
-              <div class="evo-title">질문하는 도구</div>
+              <div class="evo-title"><span class="accent">질문</span>하는 도구</div>
               <div class="evo-desc">챗봇에 한 줄 질문, 한 줄 답변</div>
               <div class="evo-tools">
                 <span class="evo-tool">ChatGPT</span>
@@ -252,7 +334,7 @@
             </div>
             <div class="evo-step anim">
               <div class="evo-level">Level 2</div>
-              <div class="evo-title">맥락을 이해하는 파트너</div>
+              <div class="evo-title"><span class="accent">맥락</span>을 이해하는 파트너</div>
               <div class="evo-desc">프로젝트 전체를 이해시키고, AI가 기억하고 먼저 제안</div>
               <div class="evo-tools">
                 <span class="evo-tool">Claude Projects</span>
@@ -262,7 +344,7 @@
             </div>
             <div class="evo-step anim">
               <div class="evo-level">Level 3</div>
-              <div class="evo-title">함께 만드는 동료</div>
+              <div class="evo-title">함께 <span class="accent">만드는</span> 동료</div>
               <div class="evo-desc">대화를 넘어, AI가 직접 코드를 쓰고 결과물을 만듦</div>
               <div class="evo-tools">
                 <span class="evo-tool accent-tool">Claude Code</span>
@@ -295,11 +377,11 @@
         <!-- 1-7 FM AI 프로젝트 개요 -->
         <section data-nav="FM 프로젝트" data-theme="warm">
           <div class="section-label">현재 진행 중인 프로젝트</div>
-          <h2>FM의 두 가지 AI 프로젝트</h2>
+          <h2>FM의 두 가지 <span class="accent">AI 프로젝트</span></h2>
           <div class="project-grid">
             <div class="project-card anim">
               <div class="project-emoji">🏗️</div>
-              <div class="project-name">FM ERP</div>
+              <div class="project-name">FM <span class="accent">ERP</span></div>
               <div class="project-oneliner">외주 없이 사내에서 직접 만드는 업무 관리 시스템</div>
               <div class="project-details">
                 <div class="project-detail">📊 프로젝트 관리 &middot; 일정 &middot; 정산 &middot; 인사</div>
@@ -309,7 +391,7 @@
             </div>
             <div class="project-card featured anim">
               <div class="project-emoji">🐋</div>
-              <div class="project-name">OrangeWhale</div>
+              <div class="project-name"><span class="accent">OrangeWhale</span></div>
               <div class="project-oneliner">FM이 직접 만든 AI 이미지/영상 생성 도구</div>
               <div class="project-details">
                 <div class="project-detail">✨ 텍스트 → 이미지 &middot; 영상 생성</div>
@@ -325,9 +407,9 @@
           <div class="split-layout">
             <div class="split-text">
               <div class="demo-badge">LIVE DEMO</div>
-              <h2>FM ERP 시스템</h2>
+              <h2>FM <span class="accent">ERP</span> 시스템</h2>
               <div class="demo-narrative">
-                <p>외주 개발사에 맡기지 않고,<br>AI 도구를 활용해 <strong>사내에서 직접 설계하고 개발</strong>하고 있습니다.</p>
+                <p>외주 개발사에 맡기지 않고,<br>AI 도구를 활용해 <strong>사내에서 직접 설계·개발</strong>하고 있습니다.</p>
               </div>
               <div class="demo-points">
                 <div class="demo-point anim">
@@ -357,7 +439,7 @@
           <div class="split-layout">
             <div class="split-text">
               <div class="demo-badge">LIVE DEMO</div>
-              <h2>OrangeWhale</h2>
+              <h2><span class="accent">OrangeWhale</span></h2>
               <div class="demo-narrative">
                 <p>외부 서비스에 의존하지 않고,<br>우리 업무에 맞는 <strong>AI 디자인 도구를</strong><br><strong>사내에서 직접 구축</strong>하고 있습니다.</p>
               </div>
@@ -396,7 +478,7 @@
               <span class="text-mask"><span class="mask-inner"><span class="accent">할 수 있는 것의 범위</span>가 달라집니다</span></span>
             </h2>
             <p class="statement-note">
-              내일은 직접 만들어봅니다 →
+              다음 시간에 직접 해봅니다 →
             </p>
           </div>
         </section>
@@ -425,7 +507,7 @@
             <div class="cover-badge">2026 FM 신입사원 교육</div>
             <h1>
               <span class="text-mask"><span class="mask-inner">내 업무에</span></span>
-              <span class="text-mask"><span class="mask-inner">AI 적용하기</span></span>
+              <span class="text-mask"><span class="mask-inner"><span class="accent">AI 적용하기</span></span></span>
             </h1>
             <p class="cover-sub">Day 2 of 2</p>
           </div>
@@ -434,7 +516,7 @@
         <!-- 2-1 어제 복습 -->
         <section data-nav="어제 복습" data-theme="warm">
           <div class="section-label">Day 1 복습</div>
-          <h2>어제 우리가 본 것</h2>
+          <h2>어제 우리가 <span class="accent">본 것</span></h2>
           <div class="recap-list">
             <div class="recap-item anim">
               <span class="recap-num">01</span>
@@ -461,40 +543,40 @@
         <!-- 2-2 플래너의 업무 흐름 -->
         <section data-nav="업무 흐름" data-theme="warm">
           <div class="section-label">우리의 일</div>
-          <h2>프로모션 플래너는 이렇게 일합니다</h2>
+          <h2>프로모션 플래너는 <span class="accent">이렇게</span> 일합니다</h2>
           <div class="workflow">
             <div class="wf-step anim">
               <div class="wf-phase">Phase 1</div>
               <div class="wf-emoji">🔍</div>
-              <div class="wf-name">브리프 분석</div>
+              <div class="wf-name"><span class="accent">브리프</span> 분석</div>
               <div class="wf-desc">클라이언트 요구사항 파악, 시장 조사, 벤치마킹</div>
               <div class="wf-ai">🤖 AI 투입 가능</div>
             </div>
             <div class="wf-step anim">
               <div class="wf-phase">Phase 2</div>
               <div class="wf-emoji">💡</div>
-              <div class="wf-name">기획 &middot; 컨셉</div>
+              <div class="wf-name"><span class="accent">기획</span> &middot; 컨셉</div>
               <div class="wf-desc">아이디어 발산, 컨셉 설정, 공간/경험 설계</div>
               <div class="wf-ai">🤖 AI 투입 가능</div>
             </div>
             <div class="wf-step anim">
               <div class="wf-phase">Phase 3</div>
               <div class="wf-emoji">📝</div>
-              <div class="wf-name">제안서 작성</div>
+              <div class="wf-name"><span class="accent">제안서</span> 작성</div>
               <div class="wf-desc">기획 구조화, 시안 제작, 예산 편성, 발표 준비</div>
               <div class="wf-ai">🤖 AI 투입 가능</div>
             </div>
             <div class="wf-step anim">
               <div class="wf-phase">Phase 4</div>
               <div class="wf-emoji">⚙️</div>
-              <div class="wf-name">실행 &middot; 운영</div>
+              <div class="wf-name"><span class="accent">실행</span> &middot; 운영</div>
               <div class="wf-desc">현장 세팅, 협력사 관리, 운영 매뉴얼, 커뮤니케이션</div>
               <div class="wf-ai">🤖 AI 투입 가능</div>
             </div>
             <div class="wf-step anim">
               <div class="wf-phase">Phase 5</div>
               <div class="wf-emoji">📊</div>
-              <div class="wf-name">결과 보고</div>
+              <div class="wf-name"><span class="accent">결과</span> 보고</div>
               <div class="wf-desc">성과 정리, 데이터 분석, 인사이트 도출</div>
               <div class="wf-ai">🤖 AI 투입 가능</div>
             </div>
@@ -504,10 +586,10 @@
         <!-- 2-3 기획 단계 구체적 활용 -->
         <section data-nav="기획에 AI" data-theme="warm">
           <div class="section-label">Phase 1~2 &middot; 브리프 분석 &amp; 기획</div>
-          <h2>기획 단계에서 AI는 이렇게 씁니다</h2>
+          <h2>기획 단계에서 AI는 <span class="accent">이렇게</span> 씁니다</h2>
           <div class="prompt-showcase">
             <div class="prompt-card anim">
-              <div class="prompt-title">💡 컨셉 발산</div>
+              <div class="prompt-title">💡 <span class="accent">컨셉</span> 발산</div>
               <div class="prompt-example">
                 <div class="prompt-tag">프롬프트 예시</div>
                 <p>"글로벌 스포츠 브랜드의 러닝 커뮤니티 런칭 팝업을 기획 중이야. 2030 남녀 타겟, 성수동, 3일간 운영. 차별화된 공간 컨셉과 체험 프로그램 아이디어를 각각 5개씩 제안해줘.
@@ -516,7 +598,7 @@
               <div class="prompt-result">단순 키워드가 아니라, 조건을 구체적으로 줄수록 실무에 바로 쓸 수 있는 결과가 나옵니다</div>
             </div>
             <div class="prompt-card anim">
-              <div class="prompt-title">🔍 트렌드 리서치</div>
+              <div class="prompt-title">🔍 <span class="accent">트렌드</span> 리서치</div>
               <div class="prompt-example">
                 <div class="prompt-tag">프롬프트 예시</div>
                 <p>"2025~2026년 국내 팝업스토어 트렌드를 정리해줘. 특히 뷰티/패션 카테고리에서 성공한 사례 5개를 성공 요인과 함께 분석해. 표로 정리해줘."</p>
@@ -529,10 +611,10 @@
         <!-- 2-4 제안서 단계 -->
         <section data-nav="제안서에 AI" data-theme="warm">
           <div class="section-label">Phase 3 &middot; 제안서 작성</div>
-          <h2>제안서 작업에서 AI는 이렇게 씁니다</h2>
+          <h2>제안서 작업에서 AI는 <span class="accent">이렇게</span> 씁니다</h2>
           <div class="prompt-showcase">
             <div class="prompt-card anim">
-              <div class="prompt-title">📑 제안서 구조 + 초안</div>
+              <div class="prompt-title">📑 <span class="accent">제안서</span> 구조 + 초안</div>
               <div class="prompt-example">
                 <div class="prompt-tag">프롬프트 예시</div>
                 <p>"아래 브리프를 바탕으로 프로모션 제안서 목차를 잡아줘. [브리프 붙여넣기] 각 섹션마다 들어갈 핵심 내용을 2~3줄로 정리해주고, 전체 분량은 PPT 20장 기준으로 배분해줘."
@@ -541,7 +623,7 @@
               <div class="prompt-result">빈 화면에서 시작하는 것과, 구조가 잡힌 상태에서 시작하는 것은 체감 속도가 완전히 다릅니다</div>
             </div>
             <div class="prompt-card anim">
-              <div class="prompt-title">🖼️ 시안 이미지 생성</div>
+              <div class="prompt-title">🖼️ <span class="accent">시안</span> 이미지 생성</div>
               <div class="prompt-example">
                 <div class="prompt-tag">OrangeWhale 활용</div>
                 <p>컨셉 키워드만 입력하면 팝업 공간 이미지, 부스 배치 시안, 키비주얼 시안을 바로 생성할 수 있습니다. 디자이너 의뢰 전에 방향 확인용으로 활용.</p>
@@ -554,10 +636,10 @@
         <!-- 2-5 실행/운영 단계 -->
         <section data-nav="실행에 AI" data-theme="warm">
           <div class="section-label">Phase 4~5 &middot; 실행 &amp; 보고</div>
-          <h2>실행과 보고에서 AI는 이렇게 씁니다</h2>
+          <h2>실행과 보고에서 AI는 <span class="accent">이렇게</span> 씁니다</h2>
           <div class="prompt-showcase">
             <div class="prompt-card anim">
-              <div class="prompt-title">📋 운영 매뉴얼 자동 생성</div>
+              <div class="prompt-title">📋 <span class="accent">운영</span> 매뉴얼 자동 생성</div>
               <div class="prompt-example">
                 <div class="prompt-tag">프롬프트 예시</div>
                 <p>"성수동에서 3일간 진행하는 뷰티 팝업 행사야. 예상 방문객 일 300명. D-14부터 D+1까지 운영 체크리스트를 만들어줘. 시설, 인력, 케이터링, 안전, 철수까지 포함해."
@@ -566,7 +648,7 @@
               <div class="prompt-result">경험 많은 선배가 잡아주는 체크리스트와 비슷한 품질을 빠르게 얻을 수 있습니다</div>
             </div>
             <div class="prompt-card anim">
-              <div class="prompt-title">📊 결과 보고서 구조화</div>
+              <div class="prompt-title">📊 <span class="accent">결과</span> 보고서 구조화</div>
               <div class="prompt-example">
                 <div class="prompt-tag">프롬프트 예시</div>
                 <p>"아래 데이터를 기반으로 프로모션 결과 보고서를 작성해줘. [방문객 수, SNS 도달수, 매출 데이터 등] KPI 대비 달성률, 주요 성과, 개선점, 다음 프로모션 제언을 포함해."
@@ -580,7 +662,7 @@
         <!-- 2-6 프롬프트 원칙 -->
         <section data-nav="프롬프트 원칙" data-theme="warm">
           <div class="section-label">프롬프트 엔지니어링</div>
-          <h2>같은 AI, 다른 결과 — 프롬프트의 차이</h2>
+          <h2>같은 AI, <span class="accent">다른 결과</span> — 프롬프트의 차이</h2>
           <div class="compare-block">
             <div class="compare-bad">
               <div class="compare-label bad">이렇게 쓰면</div>
@@ -615,26 +697,26 @@
         <!-- 2-9 실습 안내 -->
         <section data-nav="실습 안내" data-theme="warm">
           <div class="section-label">Hands-on</div>
-          <h2>직접 해봅시다</h2>
+          <h2><span class="accent">직접</span> 해봅시다</h2>
           <div class="hands-on-flow">
             <div class="ho-step anim">
               <div class="ho-num">📄</div>
               <div class="ho-content">
-                <div class="ho-title">가상 브리프 확인</div>
+                <div class="ho-title"><span class="accent">가상 브리프</span> 확인</div>
                 <div class="ho-desc">다음 슬라이드의 클라이언트 브리프를 읽으세요</div>
               </div>
             </div>
             <div class="ho-step anim">
               <div class="ho-num">🐋</div>
               <div class="ho-content">
-                <div class="ho-title">OrangeWhale에서 이미지 생성</div>
+                <div class="ho-title"><span class="accent">OrangeWhale</span>에서 이미지 생성</div>
                 <div class="ho-desc">브리프의 키워드로 팝업 공간 컨셉 이미지를 만들어보세요</div>
               </div>
             </div>
             <div class="ho-step anim">
               <div class="ho-num">💬</div>
               <div class="ho-content">
-                <div class="ho-title">결과물 공유 &middot; 피드백</div>
+                <div class="ho-title"><span class="accent">결과물</span> 공유 &middot; 피드백</div>
                 <div class="ho-desc">만든 이미지를 함께 보면서 이야기합니다</div>
               </div>
             </div>
@@ -644,7 +726,7 @@
         <!-- 2-10 가상 브리프 -->
         <section data-nav="가상 브리프" data-theme="warm">
           <div class="section-label">실습 미션</div>
-          <h2>가상 브리프</h2>
+          <h2><span class="accent">가상</span> 브리프</h2>
           <div class="brief-card">
             <div class="brief-header">Client Brief</div>
             <div class="brief-body">
@@ -685,7 +767,7 @@
           <div class="split-layout">
             <div class="split-text">
               <div class="demo-badge">LIVE DEMO</div>
-              <h2>참고: AI가 코드를<br>짜는 모습</h2>
+              <h2>참고: AI가 <span class="accent">코드를</span><br>짜는 모습</h2>
               <div class="demo-narrative">
                 <p>지금 보고 계신 이 프레젠테이션도<br><strong>Claude Code</strong>라는 AI 코딩 도구와 함께 만들었습니다.</p>
               </div>
@@ -715,26 +797,26 @@
         <!-- 2-12 내일부터 -->
         <section data-nav="내일부터" data-theme="warm">
           <div class="section-label">Action Items</div>
-          <h2>내일부터 바로 시작할 수 있는 것</h2>
+          <h2>내일부터 <span class="accent">바로 시작</span>할 수 있는 것</h2>
           <div class="action-grid">
             <div class="action-card anim">
               <div class="action-emoji">💡</div>
-              <div class="action-when">기획할 때</div>
+              <div class="action-when"><span class="accent">기획</span>할 때</div>
               <div class="action-what">Claude나 ChatGPT에 브리프를 넣고<br>컨셉 아이디어 발산부터 시작해보세요</div>
             </div>
             <div class="action-card anim">
               <div class="action-emoji">📝</div>
-              <div class="action-when">제안서 쓸 때</div>
+              <div class="action-when"><span class="accent">제안서</span> 쓸 때</div>
               <div class="action-what">빈 화면 대신,<br>AI에게 구조와 초안을 먼저 받으세요</div>
             </div>
             <div class="action-card anim">
               <div class="action-emoji">🎨</div>
-              <div class="action-when">시안이 필요할 때</div>
+              <div class="action-when"><span class="accent">시안</span>이 필요할 때</div>
               <div class="action-what">OrangeWhale에서 컨셉 이미지를<br>직접 만들어 방향을 잡으세요</div>
             </div>
             <div class="action-card anim">
               <div class="action-emoji">📊</div>
-              <div class="action-when">보고할 때</div>
+              <div class="action-when"><span class="accent">보고</span>할 때</div>
               <div class="action-what">데이터를 AI에 넣고<br>인사이트 초안을 먼저 뽑아보세요</div>
             </div>
           </div>

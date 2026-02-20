@@ -118,10 +118,17 @@ body {
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(40px) saturate(1.5);
-  -webkit-backdrop-filter: blur(40px) saturate(1.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0.35) 100%
+  );
+  backdrop-filter: blur(40px) saturate(1.6);
+  -webkit-backdrop-filter: blur(40px) saturate(1.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 1px 1px rgba(255, 255, 255, 0.8) inset,
+    0 4px 20px rgba(0, 0, 0, 0.04);
   transition: all 0.4s ease;
 }
 
@@ -518,7 +525,8 @@ section[data-theme="color-purple"] .section-label::before {
 .prompt-card,
 .action-card,
 .ba-row,
-.evo-step {
+.evo-step,
+.pe-card {
   background: linear-gradient(
     145deg,
     rgba(255, 255, 255, 0.7) 0%,
@@ -544,7 +552,8 @@ section[data-theme="color-purple"] .section-label::before {
 .project-card:hover,
 .paradigm-card:hover,
 .ba-row:hover,
-.evo-step:hover {
+.evo-step:hover,
+.pe-card:hover {
   transform: translateY(-3px) scale(1.005);
   box-shadow:
     0 1px 2px rgba(255, 255, 255, 1) inset,
@@ -561,7 +570,8 @@ section[data-theme="warm"] .project-card,
 section[data-theme="warm"] .prompt-card,
 section[data-theme="warm"] .action-card,
 section[data-theme="warm"] .ba-row,
-section[data-theme="warm"] .evo-step {
+section[data-theme="warm"] .evo-step,
+section[data-theme="warm"] .pe-card {
   border-left-color: rgba(255, 255, 255, 0.35);
   border-right-color: rgba(255, 255, 255, 0.35);
   border-bottom-color: rgba(255, 255, 255, 0.3);
@@ -1140,6 +1150,72 @@ section[data-theme="dark"] .wf-desc {
   font-size: 11px;
   color: var(--c-primary);
   font-weight: var(--fw-semi);
+}
+
+/* =============================================
+   Prompt Elements (좋은 프롬프트 기본 구성)
+   ============================================= */
+.prompt-elements {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s-4);
+  margin-top: var(--s-6);
+}
+
+.pe-card {
+  display: flex;
+  gap: var(--s-4);
+  padding: var(--s-5);
+  align-items: flex-start;
+}
+
+.pe-card:nth-child(1) { border-top: 2px solid rgba(255, 92, 0, 0.35); }
+.pe-card:nth-child(2) { border-top: 2px solid rgba(255, 92, 0, 0.5); }
+.pe-card:nth-child(3) { border-top: 2px solid rgba(255, 92, 0, 0.7); }
+.pe-card:nth-child(4) { border-top: 2px solid var(--c-primary); }
+
+.pe-num {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  color: var(--c-primary);
+  line-height: 1;
+  opacity: 0.3;
+  flex-shrink: 0;
+}
+
+.pe-content {
+  flex: 1;
+}
+
+.pe-title {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  color: var(--c-text-dark);
+  margin-bottom: var(--s-2);
+}
+
+.pe-desc {
+  font-size: var(--fs-sm);
+  color: var(--c-text-dark-2);
+  margin-bottom: var(--s-3);
+  line-height: 1.5;
+}
+
+.pe-example {
+  font-size: var(--fs-xs);
+  color: var(--c-text-dark-3);
+  background: rgba(255, 92, 0, 0.05);
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--r-sm);
+  border-left: 2px solid rgba(255, 92, 0, 0.3);
+  font-style: italic;
+}
+
+.pe-bottom {
+  text-align: center;
+  margin-top: var(--s-6);
+  font-size: var(--fs-md);
+  color: var(--c-text-dark-2);
 }
 
 /* =============================================
